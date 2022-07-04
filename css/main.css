@@ -10,6 +10,10 @@
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
+* {
+  height: 100vh;
+}
+
 
 html {
   color: #222;
@@ -261,3 +265,43 @@ textarea {
   }
 }
 
+.background {
+  background-image: url("/img/saint-jean-cap-ferrat-cote-azur.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: -1;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 0;
+}
+
+.insta {
+  width: 50px;
+  height: 50px;
+}
+
+
+.instagram {
+  font-family: "Roboto Mono";
+  color: rgb(240, 240, 240);
+}
+
+.announce {
+  color: rgb(240, 240, 240);
+  display: flex;
+  align-items: end;
+  font-size: 4em;
+  font-family: "The Nautigal";
+}
+
+@media screen and (max-width: 550px){
+  .announce {
+    font-size: 2em;
+  }
+}
