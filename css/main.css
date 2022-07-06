@@ -273,6 +273,11 @@ textarea {
   z-index: -1;
 }
 
+.logo{
+  height: 300px;
+  width: 300px;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -284,8 +289,13 @@ textarea {
 .insta {
   width: 50px;
   height: 50px;
+  border-radius: 12px;
 }
+.insta:hover{
+  transition: 0.5s;
+  box-shadow: 1px 1px 17px 6px #FFFFFF;
 
+}
 
 .instagram {
   font-family: "Roboto Mono";
@@ -293,15 +303,46 @@ textarea {
 }
 
 .announce {
+
   color: rgb(240, 240, 240);
   display: flex;
   align-items: end;
   font-size: 4em;
   font-family: "The Nautigal";
 }
+.announce::before {
+  content : "Site en maintenance";
+  animation: text-focus-in 4s cubic-bezier(0.550, 0.085, 0.680, 0.530) alternate infinite both;
+  animation-delay: 0s;
+  z-index: 0;
+}
+.announce::after {
+
+  position: absolute;
+  content : "Website maintenance";
+  animation: text-focus-in 4s cubic-bezier(0.550, 0.085, 0.680, 0.530) alternate infinite both;
+  animation-delay: 4s;
+  z-index: 2;
+}
+
+@keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  80% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+
+
 
 @media screen and (max-width: 550px){
   .announce {
-    font-size: 2em;
+    font-size: 4em;
   }
 }
