@@ -266,16 +266,28 @@ textarea {
 }
 
 .background {
-  background-image: url("/img/saint-jean-cap-ferrat-cote-azur.jpg");
+  background-image: url("../img/2.JPG");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   z-index: -1;
 }
 
-.logo{
-  height: 300px;
-  width: 300px;
+.logo {
+    height: 100%;
+    align-content: center
+}
+
+.logo_container {
+    height: 100%;
+    align-content: center;
+    text-align: center;
+}
+
+.header {
+    width: 100%;
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.7);
 }
 
 .container {
@@ -284,6 +296,7 @@ textarea {
   align-items: center;
   justify-content: center;
   z-index: 0;
+  background-color: rgba(0, 0, 0, 0.7)
 }
 
 .insta {
@@ -300,6 +313,10 @@ textarea {
 .instagram {
   font-family: "Roboto Mono";
   color: rgb(240, 240, 240);
+  position: absolute;
+  padding-top: 10px;
+  padding-left: 10px;
+  height: 50px;;
 }
 
 .announce {
@@ -337,8 +354,6 @@ textarea {
     opacity: 1;
   }
 }
-
-
 
 
 @media screen and (max-width: 550px){
